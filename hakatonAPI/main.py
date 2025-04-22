@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Query
 import socket
 import uvicorn
 from usersDB import DataBase
@@ -23,9 +24,13 @@ def my_local_ip():
         local_ip = sock.getsockname()[0]
         return local_ip
 
-@app.get("/items")
-def read_items():
+@app.get("/getItems")
+def readItems():
     return db.getData()
+
+@app.get("/addUser")
+def addUser(name = Query(..., description="Имя пользователя")):
+    return db.addUser(str(name))
 
 if __name__ == '__main__':
     uvicorn.run(app, host=my_local_ip(), port=5000)

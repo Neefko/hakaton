@@ -1,4 +1,4 @@
-a {
+a, button {
     display: inline-block;
     text-decoration: none;
     letter-spacing: 2px;
@@ -10,10 +10,15 @@ a {
     transition: 0.4s ease-in-out;
     border-radius: 10px;
     color: #ffffff;
+    background-color: #161b22; /* Добавляем фон для кнопки */
     box-shadow: 2px 2px 3px #57606a;
     cursor: pointer;
- }
-a:hover{
+    border: none; /* Убираем рамку у кнопки */
+}
+p {
+    color: #ffffff;
+}
+a:hover, button:hover{
     transform: scale(1.1);
  }
 body {

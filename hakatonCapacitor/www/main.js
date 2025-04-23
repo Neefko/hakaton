@@ -12,7 +12,8 @@ async function fetchItems() {
   });
 }
 async function add() {
-  const name = document.getElementById('username').value;
+  let timeAddUsAPI = addUserAPI + document.getElementById('username').value;
+  await fetch(timeAddUsAPI);
   document.getElementById('username').value = "";
   fetchItems();
 }

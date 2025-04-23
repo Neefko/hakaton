@@ -3,6 +3,6 @@
   "appName": "hakatoncapacitor",
   "webDir": "www",
   "server": {
-    "cleartext": true
+    "androidScheme": "http"
   }
 }

@@ -1,5 +1,8 @@
 {
   "appId": "com.example.app",
   "appName": "hakatoncapacitor",
-  "webDir": "www"
+  "webDir": "www",
+  "server": {
+    "cleartext": true
+  }
 }

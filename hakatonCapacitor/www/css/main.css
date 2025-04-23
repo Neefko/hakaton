@@ -1,0 +1,37 @@
+a, button {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 15px 25px;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.4s ease-in-out;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #161b22; /* Добавляем фон для кнопки */
+    box-shadow: 2px 2px 3px #57606a;
+    cursor: pointer;
+    border: none; /* Убираем рамку у кнопки */
+}
+p {
+    color: #ffffff;
+}
+a:hover, button:hover{
+    transform: scale(1.1);
+ }
+body {
+    background-color: #161b22;
+    text-align: center;
+}
+h1 {
+    margin: 15px 30px;
+    font-family: 'PT Sans Regular','Arial', sans-serif;
+    color: #ffffff;
+}
+h2 {
+    margin: 15px 30px;
+    font-family: 'PT Sans Regular','Arial', sans-serif;
+    color: #ffffff;
+}

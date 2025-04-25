@@ -32,5 +32,9 @@ def readItems():
 def addUser(name = Query(..., description="Имя пользователя")):
     return db.addUser(str(name))
 
+@app.get("/addMoney")
+def addUser(bank = Query(..., description="Кол-во валюты")):
+    return db.addMoney(str(bank).split('_'))
+
 if __name__ == '__main__':
     uvicorn.run(app, host=my_local_ip(), port=5000)

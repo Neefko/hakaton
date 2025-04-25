@@ -15,3 +15,14 @@ class DataBase:
         self.conn.commit()
         return True
     
+    def addMoney(self, moneyName):
+        money = moneyName[0]  # сумма для добавления
+        user_id = moneyName[1]  # id пользователя
+
+        # Обновляем значение денег, прибавляя новое значение
+        self.cursor.execute(
+        'UPDATE users SET bank = bank + ? WHERE id = ?',
+        (int(money), user_id)
+        )
+        self.conn.commit()
+        return True

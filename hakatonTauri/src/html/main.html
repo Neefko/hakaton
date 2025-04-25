@@ -1,22 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/main.css"/>
+    <meta charset="UTF-8"/>
+    <title>Hakaton</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
+    <link rel="stylesheet" href="../css/main.css" />
     <script type="module" src="../main.js" defer></script>
   </head>
 
-  <body>
+  <body data-theme="dark"> <!-- По умолчанию тёмная тема -->
+    <header>
+      <div class="top-bar">
+        <!-- Кнопки слева -->
+        <div class="left-buttons">
+          <button id="reload"></button>
+        </div>
+    
+        <!-- Кнопки справа -->
+        <div class="right-buttons">
+          <button id="themeToggle" class="mainButton">🌙</button>
+          <button id="profile"></button>
+          
+        </div>
+      </div>
+    </header>
+  <div id="sidebar">
+      <input id="username" placeholder="Enter a name..."/>
+        <button id="addUser" class="mainButton">Добавить пользователя</button>
+  </div>
     <main class="container">
-      <button id="reload">reload</button>
-      <p id="test"></p>
-      <form class="row" id="greet-form">
-        <input id="username" placeholder="Enter a name..." />
-        <button id="addUser">Добавить пользователя</button>
-      </form>
+      <p id="test" class="mainP"></p>
+
     </main>
-    <button id="closeBtn">Закрыть</button>
+
+    <footer>
+      <button id="closeBtn" class="mainButton">Закрыть</button>
+    </footer>
   </body>
 </html>

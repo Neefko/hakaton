@@ -1,13 +1,6 @@
-const { invoke } = window.__TAURI__.core;
-const { emit } = window.__TAURI__.event;
-
 const getAPI = "http://192.168.0.112:5000/getItems";
 const addUserAPI = "http://192.168.0.112:5000/addUser?name=";
 let btnClicked = false;
-
-async function closeWindow() {
-  await invoke("close_window");
-}
 
 async function menu() {
   let menuBarUser = document.getElementById("user-menu");
@@ -64,7 +57,6 @@ window.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("show");
     });
   
-    document.querySelector("#closeBtn")?.addEventListener("click", closeWindow);
     document.querySelector("#reload").addEventListener("click", reloadAPI);
     document.querySelector("#addUser").addEventListener("click", add);
     document.querySelector("#themeToggle").addEventListener("click", toggleTheme);

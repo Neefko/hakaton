@@ -1,221 +1,213 @@
 :root {
-    --background-color-dark: #161b22;
-    --background-color-light: #ffffff;
-    --text-color-dark: #ffffff;
-    --text-color-light: #000000;
-    --button-background-dark: #161b22;
-    --button-background-light: #f1f1f1;
-    --button-hover-dark: #222b33;
-    --button-hover-light: #d1d1d1;
-    --border-color: #57606a;
-  }
-  
-  /* Для тёмной темы */
-  body[data-theme="dark"] {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-  }
-  
-  body[data-theme="dark"] .top-bar {
-    background-color: var(--background-color-dark);
-  }
-  
-  body[data-theme="dark"] .mainButton {
-    background-color: var(--button-background-dark);
-    color: var(--text-color-dark);
-    box-shadow: 2px 2px 3px var(--border-color);
-  }
-  
-  body[data-theme="dark"] .mainP {
-    color: var(--text-color-dark);
-  }
+  --background-color-dark: #161b22;
+  --background-color-light: #ffffff;
+  --text-color-dark: #ffffff;
+  --text-color-light: #000000;
+  --button-background-dark: #161b22;
+  --button-background-light: #f1f1f1;
+  --button-hover-dark: #222b33;
+  --button-hover-light: #d1d1d1;
+  --border-color: #57606a;
+}
 
-  body[data-theme="dark"] .mainButton:hover {
-    background-color: var(--button-hover-dark);
-  }
-  
-  body[data-theme="dark"] #reload,
-  body[data-theme="dark"] #profile {
-    background-color: var(--background-color-dark);
-  }
-  
-  /* Для светлой темы */
-  body[data-theme="light"] {
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
-  }
+/* Тёмная тема */
+body[data-theme="dark"] {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
 
-  body[data-theme="light"] .mainP {
-    color: var(--text-color-light);
-  }
-  
-  body[data-theme="light"] .top-bar {
-    background-color: var(--background-color-light);
-  }
-  
-  body[data-theme="light"] .mainButton {
-    background-color: var(--button-background-light);
-    color: var(--text-color-light);
-    box-shadow: 2px 2px 3px var(--border-color);
-  }
-  
-  body[data-theme="light"] .mainButton:hover {
-    background-color: var(--button-hover-light);
-  }
-  
-  body[data-theme="light"] #reload,
-  body[data-theme="light"] #profile {
-    background-color: var(--background-color-light);
-  }
-  
-  /* Дополнительные стили */
-  button {
-    transition: 0.3s ease-in-out;
-  }
-  
-  a:hover, button:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Подсветка кнопок на разных темах */
-  button#themeToggle {
-    font-size: 18px;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
-  input {
-    padding: 10px;
-    margin: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 300px; /* Максимальная ширина для лучшего отображения */
-    background-color: #2c2c2c;
-    color: white;
-    right: 20px;
-    position: relative;
-  }
-  
-  body {
-    background-color: #161b22;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header, footer {
-    padding: 5px 0;  /* Уменьшены отступы сверху и снизу */
-  }
-  
-  h1, h2 {
-    margin: 15px 30px;
-    font-family: 'PT Sans Regular','Arial', sans-serif;
-  }
-  
-  p {
-    color: #ffffff;
-  }
-  
-  a, .mainButton {
-    display: inline-block;
-    text-decoration: none;
-    letter-spacing: 2px;
-    margin: 15px 25px;
-    padding: 15px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #161b22;
-    box-shadow: 2px 2px 3px #57606a;
-    cursor: pointer;
-    border: none;
-  }
-  
-  a:hover, button:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Top Bar Layout */
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 25px;  /* Уменьшены отступы */
-    position: relative;
-  }
-  
-  /* Размещение кнопок в header */
-  .top-bar .left-buttons {
-    display: flex;
-    gap: 15px;
-    padding: 5px 25px;
-  }
-  
-  .top-bar .right-buttons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  /* Горизонтальная полоса */
-  .top-bar::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(61, 13, 133);
-  }
-  
-  /* Icon Buttons */
-  #reload,
-  #profile {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #161b22;
-    height: 50px;
-    width: 55px;
-    display: inline-block;
-    border-radius: 30px;
-    transition: 0.3s ease-in-out;
-    box-shadow: 2px 2px 3px #57606a;
-    cursor: pointer;
-    border: none;
-    margin: 0;
-  }
-  
-  /* Icons */
-  #reload {
-    background-image: url(../assets/reload.png);
-  }
-  
-  #profile {
-    background-image: url(../assets/profile.png); /* Замени на свою иконку */
-  }
-  
-  /* Для кнопки переключения темы */
-  #themeToggle {
-    font-size: 18px;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
+body[data-theme="dark"] .top-bar {
+  background-color: var(--background-color-dark);
+}
+
+body[data-theme="dark"] .mainButton {
+  background-color: var(--button-background-dark);
+  color: var(--text-color-dark);
+  box-shadow: 2px 2px 3px var(--border-color);
+}
+
+body[data-theme="dark"] .mainP {
+  color: var(--text-color-dark);
+}
+
+body[data-theme="dark"] .mainButton:hover {
+  background-color: var(--button-hover-dark);
+}
+
+body[data-theme="dark"] #reload,
+body[data-theme="dark"] #profile {
+  background-color: var(--background-color-dark);
+}
+
+/* Светлая тема */
+body[data-theme="light"] {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+body[data-theme="light"] .mainP {
+  color: var(--text-color-light);
+}
+
+body[data-theme="light"] .top-bar {
+  background-color: var(--background-color-light);
+}
+
+body[data-theme="light"] .mainButton {
+  background-color: var(--button-background-light);
+  color: var(--text-color-light);
+  box-shadow: 2px 2px 3px var(--border-color);
+}
+
+body[data-theme="light"] .mainButton:hover {
+  background-color: var(--button-hover-light);
+}
+
+body[data-theme="light"] #reload,
+body[data-theme="light"] #profile {
+  background-color: var(--background-color-light);
+}
+
+/* Подсветка кнопок на разных темах */
+button {
+  transition: 0.3s ease-in-out;
+}
+
+a:hover, button:hover {
+  transform: scale(1.1);
+}
+
+button#themeToggle {
+  font-size: 18px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #2c2c2c;
+  color: white;
+  right: 20px;
+  position: relative;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin: 15px 30px;
+  font-family: 'PT Sans Regular', 'Arial', sans-serif;
+}
+
+p {
+  color: #ffffff;
+}
+
+a, .mainButton {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 2px;
+  margin: 15px 25px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #161b22;
+  box-shadow: 2px 2px 3px #57606a;
+  cursor: pointer;
+  border: none;
+}
+
+a:hover, button:hover {
+  transform: scale(1.1);
+}
+
+/* Top Bar Layout */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  position: relative;
+}
+
+.top-bar .left-buttons {
+  display: flex;
+  gap: 15px;
+  padding: 5px 25px;
+}
+
+.top-bar .right-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Горизонтальная полоса */
+.top-bar::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(61, 13, 133);
+}
+
+/* Icon Buttons */
+#reload,
+#profile {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #161b22;
+  height: 50px;
+  width: 55px;
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 2px 2px 3px #57606a;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+}
+
+#reload {
+  background-image: url(../assets/reload.png);
+}
+
+#profile {
+  background-image: url(../assets/profile.png);
+}
+
+#themeToggle {
+  font-size: 18px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* Боковое меню */
 #sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* изначально скрыто */
+  left: -250px;
   width: 250px;
   height: 100vh;
   background-color: var(--menu-bg, rgb(61, 13, 133));
@@ -225,12 +217,10 @@
   z-index: 1000;
 }
 
-/* Класс, показывающий меню */
 #sidebar.active {
   left: 0;
 }
 
-/* Затемнение фона */
 #overlay {
   display: none;
   position: fixed;
@@ -242,18 +232,81 @@
   z-index: 999;
 }
 
-/* Показ затемнения */
 #overlay.show {
   display: block;
 }
+
 footer {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 20px;
 }
+
 #registerBtn {
   position: relative;
-  top: 200px;   /* Смещаем кнопку вниз на 20px */
-  right: 42.5px;  /* Смещаем кнопку вправо на 20px */
+  top: 200px;
+  right: 42.5px;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+}
+
+/* Сообщения */
+/* Сообщения */
+.chat-message {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  color: white;
+  word-wrap: break-word;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 70%;
+  margin-left: auto;
+}
+
+/* Ваши сообщения */
+.chat-message.user {
+  background-color: #4caf50;
+  align-self: flex-start;  /* Ваши сообщения слева */
+  margin-left: 10px;
+}
+
+/* Сообщения других пользователей */
+.chat-message.friend {
+  background-color: #1e1e1e;
+  align-self: flex-end; /* Сообщения других справа */
+  margin-right: 10px;
+}
+
+.chat-input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.chat-input-area button {
+  margin-left: 10px;
 }

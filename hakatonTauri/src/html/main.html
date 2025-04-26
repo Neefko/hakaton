@@ -23,15 +23,28 @@
         </div>
       </div>
     </header>
-  <div id="sidebar">
-    <input id="login-name" placeholder="Имя пользователя">
-    <input id="login-pass" placeholder="Пароль" type="password">
-    <button id="loginBtn" class="mainButton">Войти</button>
-    <p id="question" class="mainP"></p>
-    <button id="registerBtn" class="mainButton">Зарегистрироваться</button>
-  </div>
-    <main class="container">
 
+    <!-- Боковое меню -->
+    <div id="sidebar">
+      <input id="login-name" placeholder="Имя пользователя">
+      <input id="login-pass" placeholder="Пароль" type="password">
+      <button id="loginBtn" class="mainButton">Войти</button>
+      <p id="question" class="mainP"></p>
+      <button id="registerBtn" class="mainButton">Зарегистрироваться</button>
+    </div>
+
+    <main class="container">
+      <div id="chat-controls">
+        <button id="commonChatBtn" class="mainButton">Общий чат</button>
+        <button id="anonChatBtn" class="mainButton">Анонимный чат</button>
+      </div>
+
+      <div id="chatBox" class="chat-box"></div>
+
+      <div id="message-controls">
+        <input type="text" id="messageInput" placeholder="Введите сообщение" />
+        <button id="sendBtn" class="mainButton">Отправить</button>
+      </div>
     </main>
 
     <footer>

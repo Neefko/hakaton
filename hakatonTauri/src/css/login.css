@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    flex-direction: column; /* Обеспечивает вертикальное расположение содержимого */
+  }
+  
+  header {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    left: 0; /* Чтобы header растягивался на всю ширину */
+    z-index: 10;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; /* Обеспечиваем полную ширину для top-bar */
+  }
+  
+  .right-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #themeToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column; /* Размещение элементов друг под другом */
+    align-items: center;
+    gap: 16px; /* Отступы между элементами */
+    margin-top: 80px; /* Сдвигаем содержимое, чтобы не перекрывать кнопку */
+    width: 100%; /* Обеспечиваем полную ширину для main */
+  }
+  
+  input {
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина для лучшего отображения */
+    background-color: #2c2c2c;
+    color: white;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .mainP {
+    text-align: center;
+    color: #ff0000;
+  }
